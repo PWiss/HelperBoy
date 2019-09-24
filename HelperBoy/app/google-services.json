@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "716948695486",
+    "firebase_url": "https://helperboy-894ab.firebaseio.com",
+    "project_id": "helperboy-894ab",
+    "storage_bucket": "helperboy-894ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716948695486:android:845a63139ca27dd126f1ef",
+        "android_client_info": {
+          "package_name": "com.bot.factory.helperboy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "716948695486-bi0i9cs0kipvi88vverhgt4mvtaroh28.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNulbRqL-n8v2JJQp19EOqHx26ieLL0o4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "716948695486-bi0i9cs0kipvi88vverhgt4mvtaroh28.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

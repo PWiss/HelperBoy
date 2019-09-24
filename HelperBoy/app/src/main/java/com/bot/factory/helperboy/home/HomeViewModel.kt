@@ -12,7 +12,7 @@ class HomeViewModel(
     val user by lazy {
         repository.currentUser()
     }
-
+    //testing
     /*fun logout2(view: View){
         repository.logout()
         //view.context.startLoginActivity()

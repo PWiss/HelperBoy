@@ -25,28 +25,24 @@ class HomeFragment : Fragment(), KodeinAware {
 
     private lateinit var viewModel: HomeViewModel
 
-    companion object {
-        fun newInstance() = HomeFragment()
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val binding: HomeFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.home_fragment, container, false)
         viewModel = ViewModelProviders.of(this, factory).get(HomeViewModel::class.java)
-        var myView : View = binding.root
+        val myView : View = binding.root
         binding.viewmodel = viewModel
 
-        //viewModel.authListener = this
         return myView
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(HomeViewModel::class.java)
-        // TODO: Use the ViewModel
+
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

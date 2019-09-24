@@ -5,7 +5,6 @@ import com.bot.factory.helperboy.auth.AuthViewModelFactory
 import com.bot.factory.helperboy.auth.data.FirebaseAuthFun
 import com.bot.factory.helperboy.auth.data.UserRepository
 import com.bot.factory.helperboy.home.HomeViewModelFactory
-import com.google.firebase.auth.FirebaseAuth
 
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
@@ -15,6 +14,7 @@ import org.kodein.di.generic.instance
 import org.kodein.di.generic.provider
 import org.kodein.di.generic.singleton
 
+@Suppress("unused")
 class Application : Application(), KodeinAware{
 
     override val kodein = Kodein.lazy {

@@ -13,7 +13,8 @@ import androidx.navigation.findNavController
 
 import com.bot.factory.helperboy.R
 import com.bot.factory.helperboy.databinding.FragmentSignUpBinding
-import kotlinx.android.synthetic.main.signup_fragment.text_view_register
+import kotlinx.android.synthetic.main.fragment_sign_up.*
+
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.kodein
 import org.kodein.di.generic.instance

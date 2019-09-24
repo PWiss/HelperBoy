@@ -1,7 +1,5 @@
 package com.bot.factory.helperboy.auth
 
-import android.content.Intent
-import android.view.View
 import androidx.lifecycle.ViewModel
 import com.bot.factory.helperboy.auth.data.UserRepository
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -71,7 +69,7 @@ class AuthViewModel(
         disposables.add(disposable)
     }
 
-    fun goToSignup(view: View) {
+    /*fun goToSignup(view: View) {
         Intent(view.context, SignUpFragment::class.java).also {
             view.context.startActivity(it)
         }
@@ -82,7 +80,7 @@ class AuthViewModel(
             view.context.startActivity(it)
         }
     }
-
+*/
 
     //disposing the disposables
     override fun onCleared() {

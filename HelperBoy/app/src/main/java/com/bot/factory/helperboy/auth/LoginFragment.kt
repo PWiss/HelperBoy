@@ -21,22 +21,15 @@ import androidx.fragment.app.Fragment
 
 class LoginFragment : Fragment(), AuthListener, KodeinAware {
 
+    //Kodein
     override val kodein by kodein()
     private val factory : AuthViewModelFactory by instance()
 
-
+    //Binding ViewModel
     private lateinit var viewModel: AuthViewModel
     private lateinit var myView : View
     private lateinit var binding: LoginFragmentBinding
 
-
-
-    private var listener: OnFragmentInteractionListener? = null
-
-
-    companion object {
-        fun newInstance() = LoginFragment()
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -56,7 +49,6 @@ class LoginFragment : Fragment(), AuthListener, KodeinAware {
         // TODO: Use the ViewModel
         viewModel.user?.let {
             myView.findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
-
         }
     }
 
@@ -66,10 +58,7 @@ class LoginFragment : Fragment(), AuthListener, KodeinAware {
         text_view_register.setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_signUpFragment)
         }
-
-
     }
-
 
     override fun onStarted() {
         //progressbar.visibility = View.VISIBLE
@@ -84,15 +73,5 @@ class LoginFragment : Fragment(), AuthListener, KodeinAware {
         //progressbar.visibility = View.GONE
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
     }
-    override fun onDetach() {
-        super.onDetach()
-        listener = null
-    }
-    interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        fun onFragmentInteraction(uri: Uri)
-    }
-
-
 
 }

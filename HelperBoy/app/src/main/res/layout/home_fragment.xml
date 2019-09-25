@@ -8,29 +8,65 @@
             type="com.bot.factory.helperboy.home.HomeViewModel"/>
     </data>
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#009688"
         tools:context=".ui.home.HomeActivity">
 
         <TextView
-            android:text="@{viewmodel.user.email}"
-            tools:text="Halllllo"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            android:layout_centerInParent="true"
             android:id="@+id/textViewEmail"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:text="@{viewmodel.user.email}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logout"
+            tools:text="Halllllo" />
 
         <Button
             android:id="@+id/logout"
-            android:text="Logout"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/textViewEmail"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="34dp"
+            android:text="Logout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </RelativeLayout>
+        <Button
+            android:id="@+id/Issue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginBottom="35dp"
+            android:text="Your Issue"
+            app:layout_constraintBottom_toTopOf="@+id/makeIssue"
+            app:layout_constraintStart_toStartOf="@+id/makeIssue" />
+
+        <Button
+            android:id="@+id/makeIssue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="248dp"
+            android:text="Create Issue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/makeProject" />
+
+        <Button
+            android:id="@+id/makeProject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="61dp"
+            android:text="Create Project"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/makeIssue" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

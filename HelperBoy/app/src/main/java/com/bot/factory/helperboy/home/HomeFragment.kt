@@ -50,6 +50,9 @@ class HomeFragment : Fragment(), KodeinAware {
             viewModel.logout()
             Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_loginFragment)
         }
+        makeProject.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_createProjectFragment)
+        }
 
 
     }

@@ -4,7 +4,10 @@ import android.app.Application
 import com.bot.factory.helperboy.auth.AuthViewModelFactory
 import com.bot.factory.helperboy.auth.data.FirebaseAuthFun
 import com.bot.factory.helperboy.auth.data.UserRepository
+import com.bot.factory.helperboy.createProject.CreateProjectViewModelFactory
 import com.bot.factory.helperboy.home.HomeViewModelFactory
+import com.bot.factory.helperboy.repository.FirebaseProjectFun
+import com.bot.factory.helperboy.repository.ProjectRepository
 
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
@@ -24,6 +27,11 @@ class Application : Application(), KodeinAware{
         bind() from singleton { UserRepository(instance()) }
         bind() from provider { AuthViewModelFactory(instance()) }
         bind() from provider { HomeViewModelFactory(instance()) }
+
+        bind() from singleton { FirebaseProjectFun()}
+        bind() from singleton { ProjectRepository(instance()) }
+        bind() from provider { CreateProjectViewModelFactory(instance()) }
+        //bind() from provider { HomeViewModelFactory(instance()) }
 
     }
 }
